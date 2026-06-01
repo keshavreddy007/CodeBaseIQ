@@ -20,10 +20,10 @@ import { Terms } from "./components/Terms";
 import { Product } from "./components/Product";
 import { Resources } from "./components/Resources";
 import { CookieConsent } from "./components/CookieConsent";
+import { Analytics } from "@vercel/analytics/react";
 import { useState, useEffect } from "react";
 import { auth } from "./lib/firebase";
 import { User as FirebaseUser } from "firebase/auth";
-import { Analytics } from "@vercel/analytics/react";
 
 export type ViewState = 'landing' | 'dashboard' | 'about' | 'privacy' | 'terms' | 'product' | 'resources';
 
