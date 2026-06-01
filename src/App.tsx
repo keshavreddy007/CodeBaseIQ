@@ -23,6 +23,7 @@ import { CookieConsent } from "./components/CookieConsent";
 import { useState, useEffect } from "react";
 import { auth } from "./lib/firebase";
 import { User as FirebaseUser } from "firebase/auth";
+import { Analytics } from "@vercel/analytics/react";
 
 export type ViewState = 'landing' | 'dashboard' | 'about' | 'privacy' | 'terms' | 'product' | 'resources';
 
@@ -109,6 +110,7 @@ export default function App() {
       
       <Footer onViewChange={handleViewChange} />
       <CookieConsent />
+      <Analytics />
     </div>
   );
 }
